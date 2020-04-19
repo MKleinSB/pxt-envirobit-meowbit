@@ -1,0 +1,21 @@
+{
+    "name": "envirobit",
+    "description": "",
+    "dependencies": {
+        "device": "*",
+        "edge-connector": "*"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "envirobit.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "supportedTargets": [
+        "arcade"
+    ],
+    "preferredEditor": "tsprj"
+}
