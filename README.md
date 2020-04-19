@@ -13,6 +13,7 @@ Dieses Repository kann als **Erweiterung** in MakeCode hinzugefügt werden.
 * klicke auf **Erweiterungen** unter dem Zahnrad-Menü
 * nach **https://github.com/mkleinsb/pxt-envirobit-meowbit** suchen und importieren
 
+![Envirobit](https://github.com/MKleinSB/pxt-envirobit-meowbit/blob/master/arcade-Screenshot.png)
 ## enviro:bit
 
 This package adds support for the Pimoroni enviro:bit to arcade.makecode.com
@@ -59,27 +60,11 @@ The following functions get the proportional amount of each colour, adjusted aga
 
 To read the absolute light level, use `envirobit.getLight()`.
 
-For example this script will toggle the micro:bit's LED display on when the light level is less than 50:
-
-```typescript
-basic.forever(() => {
-    if (envirobit.getLight() < 500) {
-        basic.showLeds(`
-            . . # . .
-            . # # # .
-            # # # # #
-            . # # # .
-            . . # . .
-            `)
-    } else {
-        basic.clearScreen()
-    }
-})
-```
-
 ### Sound
 
 Finally, enviro:bit has a mems microphone which senses the amount of noise in your environment. It's great for detecting loud sounds like claps or shouts so your program can respond to them.
+
+PAY ATTENTION!!! Sound slows down Arcade and crashes after a while!
 
 * `envirobit.onClap(() => {})` - Perform an action when a clap is detected
 * `envirobit.timeSinceLastClap()` - Get the time (in milliseconds) since a clap was last detected
